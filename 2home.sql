@@ -21,11 +21,11 @@ WHERE name NOT LIKE '% %';
 SELECT name
 FROM Tracks
 WHERE
-    LOWER(name) ILIKE 'my %' OR
-    LOWER(name) ILIKE '% my' OR
-    LOWER(name) ILIKE '% my %' OR
-    LOWER(name) ILIKE 'my' OR
-    LOWER(name) ILIKE 'мой %' OR
-    LOWER(name) ILIKE '% мой' OR
-    LOWER(name) ILIKE '% мой %' OR
-    LOWER(name) ILIKE 'мой';
+    name ILIKE 'my %' OR
+    name ILIKE '% my' OR
+    name ILIKE '% my %' OR
+    name ILIKE 'my' OR
+    name ILIKE 'мой %' OR
+    name ILIKE '% мой' OR
+    name ILIKE '% мой %' OR
+    name ILIKE 'мой';
