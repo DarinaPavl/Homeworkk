@@ -18,7 +18,14 @@ SELECT name
 FROM Performers
 WHERE name NOT LIKE '% %';
 
--- 5. Название треков, которые содержат слово «мой» или «my»
 SELECT name
 FROM Tracks
-WHERE LOWER(name) LIKE '%my%' OR LOWER(name) LIKE '%мой%';
+WHERE
+    LOWER(name) ILIKE 'my %' OR
+    LOWER(name) ILIKE '% my' OR
+    LOWER(name) ILIKE '% my %' OR
+    LOWER(name) ILIKE 'my' OR
+    LOWER(name) ILIKE 'мой %' OR
+    LOWER(name) ILIKE '% мой' OR
+    LOWER(name) ILIKE '% мой %' OR
+    LOWER(name) ILIKE 'мой';
